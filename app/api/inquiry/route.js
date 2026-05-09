@@ -12,34 +12,33 @@ export async function POST(req) {
     const serviceType = formData.get("serviceType");
     const message = formData.get("message");
 
-    await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: "24 Hour Barber <onboarding@resend.dev>",
       to: ["24hourbarber@gmail.com"],
       subject: `New Inquiry - ${serviceType}`,
       reply_to: email,
-
       html: `
         <h2>New Inquiry Submission</h2>
-
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Service Type:</strong> ${serviceType}</p>
-
         <hr />
-
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
     });
 
-    return Response.redirect(
-      new URL("/thank-you", req.url),
-      302
-    );
+    if (error) {
+      console.error("Resend error:", error);
+      return new Response(JSON.stringify(error), { status: 500 });
+    }
 
+    console.log("Resend success:", data);
+
+    return Response.redirect(new URL("/thank-you", req.url), 302);
   } catch (error) {
-    console.error(error);
+    console.error("Server error:", error);
 
     return new Response(
       JSON.stringify({
