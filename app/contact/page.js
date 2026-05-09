@@ -1,4 +1,3 @@
-
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#0b0b0d] px-6 py-20 text-white">
