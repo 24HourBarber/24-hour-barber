@@ -252,9 +252,9 @@ export default function HomePage() {
             <div className="contact-field">Phone or email</div>
             <div className="contact-field">Individual or residential request</div>
             <div className="contact-field">Service details</div>
-            <a href="mailto:you@example.com" className="button button-light button-full">
-              Submit Inquiry
-            </a>
+            <a href="/contact" className="button button-light button-full">
+  Complete Inquiry Form
+</a>
           </div>
         </div>
       </section>
