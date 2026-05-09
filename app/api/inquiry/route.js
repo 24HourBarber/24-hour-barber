@@ -1,54 +1,53 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
-export async function POST(request) {
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export async function POST(req) {
   try {
-    const formData = await request.formData();
+    const formData = await req.formData();
 
     const name = formData.get("name");
-    const organization = formData.get("organization");
     const email = formData.get("email");
     const phone = formData.get("phone");
     const serviceType = formData.get("serviceType");
-    const residents = formData.get("residents");
     const message = formData.get("message");
 
-    const transporter = nodemailer.createTransport({
-      host: "smtp.office365.com",
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
-    await transporter.sendMail({
-      from: `"24 Hour Barber Website" <${process.env.EMAIL_USER}>`,
-      to: "info@24hourbarber.com",
-      replyTo: email,
+    await resend.emails.send({
+      from: "24 Hour Barber <inquiry@send.24hourbarber.com>",
+      to: ["info@24hourbarber.com"],
       subject: `New Inquiry - ${serviceType}`,
-      text: `
-New Inquiry
+      reply_to: email,
 
-Name: ${name}
-Organization: ${organization}
-Email: ${email}
-Phone: ${phone}
-Service Type: ${serviceType}
-Residents/Clients: ${residents}
+      html: `
+        <h2>New Inquiry Submission</h2>
 
-Message:
-${message}
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Service Type:</strong> ${serviceType}</p>
+
+        <hr />
+
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
       `,
     });
 
-    return Response.redirect(new URL("/thank-you", request.url));
+    return Response.redirect(
+      new URL("/thank-you", req.url),
+      302
+    );
 
   } catch (error) {
     console.error(error);
 
-    return new Response("Failed to send inquiry.", {
-      status: 500,
-    });
+    return new Response(
+      JSON.stringify({
+        error: "Failed to send inquiry.",
+      }),
+      {
+        status: 500,
+      }
+    );
   }
 }
