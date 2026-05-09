@@ -1,16 +1,16 @@
 {
-  "name": "24-hour-barber-site",
-  "private": true,
+  "name": "24-hour-barber",
   "version": "0.1.0",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
-  "next": "...",
-  "react": "...",
-  "react-dom": "...",
-  "nodemailer": "^6.9.15"
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "nodemailer": "^6.9.15"
+  }
 }
