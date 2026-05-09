@@ -13,7 +13,7 @@ export async function POST(req) {
     const message = formData.get("message");
 
     await resend.emails.send({
-      from: from: "24 Hour Barber <onboarding@resend.dev>",
+      from: "24 Hour Barber <onboarding@resend.dev>",
       to: ["24hourbarber@gmail.com"],
       subject: `New Inquiry - ${serviceType}`,
       reply_to: email,
