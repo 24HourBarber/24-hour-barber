@@ -43,6 +43,7 @@ ${message}
     });
 
     return Response.redirect(new URL("/thank-you", request.url));
+
   } catch (error) {
     console.error(error);
 
