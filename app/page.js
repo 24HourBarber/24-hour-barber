@@ -1,15 +1,16 @@
-<form action="/api/inquiry" method="POST" style={{ display: "grid", gap: "16px" }}>
+<form action="/api/inquiry" method="POST" className="space-y-4 max-w-xl">
+
   <input
     name="name"
     required
     placeholder="Your name"
-    style={{ padding: "14px", borderRadius: "14px", color: "black" }}
+    className="w-full rounded-2xl px-4 py-3 text-black"
   />
 
   <input
     name="organization"
     placeholder="Organization / residential home"
-    style={{ padding: "14px", borderRadius: "14px", color: "black" }}
+    className="w-full rounded-2xl px-4 py-3 text-black"
   />
 
   <input
@@ -17,32 +18,32 @@
     type="email"
     required
     placeholder="Email address"
-    style={{ padding: "14px", borderRadius: "14px", color: "black" }}
+    className="w-full rounded-2xl px-4 py-3 text-black"
   />
 
   <input
     name="phone"
     required
     placeholder="Phone number"
-    style={{ padding: "14px", borderRadius: "14px", color: "black" }}
+    className="w-full rounded-2xl px-4 py-3 text-black"
   />
 
   <select
     name="serviceType"
     required
-    style={{ padding: "14px", borderRadius: "14px", color: "black" }}
+    className="w-full rounded-2xl px-4 py-3 text-black"
   >
     <option value="">Select service type</option>
-    <option value="Individual Appointment">Individual Appointment</option>
-    <option value="Residential Program Inquiry">Residential Program Inquiry</option>
-    <option value="Recurring Grooming Service">Recurring Grooming Service</option>
-    <option value="Consultation Request">Consultation Request</option>
+    <option>Individual Appointment</option>
+    <option>Residential Program Inquiry</option>
+    <option>Recurring Grooming Service</option>
+    <option>Consultation Request</option>
   </select>
 
   <input
     name="residents"
     placeholder="Number of residents / clients"
-    style={{ padding: "14px", borderRadius: "14px", color: "black" }}
+    className="w-full rounded-2xl px-4 py-3 text-black"
   />
 
   <textarea
@@ -50,20 +51,14 @@
     required
     placeholder="Tell us what you need"
     rows="5"
-    style={{ padding: "14px", borderRadius: "14px", color: "black" }}
+    className="w-full rounded-2xl px-4 py-3 text-black"
   />
 
   <button
     type="submit"
-    style={{
-      padding: "14px",
-      borderRadius: "14px",
-      background: "white",
-      color: "#0b0b0d",
-      fontWeight: "700",
-      cursor: "pointer"
-    }}
+    className="w-full rounded-2xl bg-white px-5 py-3 font-semibold text-neutral-950"
   >
     Request Service Consultation
   </button>
+
 </form>
