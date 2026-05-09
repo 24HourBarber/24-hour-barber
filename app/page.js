@@ -307,10 +307,11 @@ export default function HomePage() {
     className="contact-field contact-message"
   />
 
-  <button type="submit" className="button button-light button-full">
+    <button type="submit" className="button button-light button-full">
     Submit Inquiry
   </button>
 </form>
+        </div>
       </section>
 
       <footer className="site-footer">
