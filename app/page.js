@@ -247,57 +247,70 @@ export default function HomePage() {
             </p>
           </div>
 
-          <form action="/api/inquiry" method="POST" className="contact-card">
-  <input
-    name="name"
-    required
-    placeholder="Your name or organization"
-    className="contact-field"
-  />
+    <form action="/api/inquiry" method="POST" className="contact-card">
+  <div className="contact-grid">
+    <input
+      name="name"
+      required
+      placeholder="Your name or organization"
+      className="contact-field"
+    />
 
-  <input
-    name="email"
-    type="email"
-    required
-    placeholder="Email address"
-    className="contact-field"
-  />
+    <input
+      name="email"
+      type="email"
+      required
+      placeholder="Email address"
+      className="contact-field"
+    />
 
-  <input
-    name="phone"
-    required
-    placeholder="Phone number"
-    className="contact-field"
-  />
+    <input
+      name="phone"
+      required
+      placeholder="Phone number"
+      className="contact-field"
+    />
 
-  <select
-    name="serviceType"
-    required
-    className="contact-field"
-    defaultValue=""
-  >
-    <option value="" disabled>
-      Individual or residential request
-    </option>
-    <option value="Individual Appointment">Individual Appointment</option>
-    <option value="Residential Program Inquiry">Residential Program Inquiry</option>
-    <option value="Recurring Grooming Service">Recurring Grooming Service</option>
-    <option value="Consultation Request">Consultation Request</option>
-  </select>
+    <select
+      name="serviceType"
+      required
+      className="contact-field"
+      defaultValue=""
+    >
+      <option value="" disabled>
+        Service type
+      </option>
+
+      <option value="Individual Appointment">
+        Individual Appointment
+      </option>
+
+      <option value="Residential Program Inquiry">
+        Residential Program Inquiry
+      </option>
+
+      <option value="Recurring Grooming Service">
+        Recurring Grooming Service
+      </option>
+
+      <option value="Consultation Request">
+        Consultation Request
+      </option>
+    </select>
+  </div>
 
   <textarea
     name="message"
     required
     placeholder="Service details"
     rows="4"
-    className="contact-field"
+    className="contact-field contact-message"
   />
 
   <button type="submit" className="button button-light button-full">
     Submit Inquiry
   </button>
 </form>
-        </div>
       </section>
 
       <footer className="site-footer">
