@@ -11,6 +11,35 @@ export default function ResidentialPartnersPage() {
 
   return (
     <main className="page-shell">
+    <header className="site-header">
+  <div className="container header-inner">
+    <a href="/" className="brand" aria-label="24 Hour Barber home">
+      <div className="brand-badge">24</div>
+
+      <div>
+        <div className="brand-kicker">24 Hour Barber</div>
+        <div className="brand-subtitle">
+          On-site barber services for individuals and residential care communities.
+        </div>
+      </div>
+    </a>
+
+    <nav className="site-nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/#services">Services</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+
+    <a
+      href="https://calendly.com/24hourbarber"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="button button-light"
+    >
+      Schedule Consultation
+    </a>
+  </div>
+</header>
       <section className="hero-section">
         <div className="container hero-grid">
           <div>
