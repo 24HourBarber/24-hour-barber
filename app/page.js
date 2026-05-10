@@ -1,8 +1,5 @@
 import CalendlyButton from "./components/CalendlyButton";
 
-"use client";
-
-import Script from "next/script";
 const services = [
   {
     title: 'Haircuts & Shape-Ups',
@@ -311,10 +308,11 @@ export default function HomePage() {
   />
 
     <button type="submit" className="button button-light button-full">
-    Submit Inquiry
-  </button><button type="submit" className="button button-light button-full">
   Submit Inquiry
-</button><CalendlyButton />
+</button>
+
+<CalendlyButton />
+</form>
         </div>
       </section>
 
