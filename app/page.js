@@ -320,9 +320,7 @@ export default function HomePage() {
           <p>© 2026 24 Hour Barber. Mobile barbering for clients and residential care communities.</p>
           <div className="footer-links">
             <a href="#services">Services</a>
-            <a href="#services">Services</a>
 <a href="/residential-partners">Residential Partners</a>
-<a href="#contact">Contact</a>
             <a href="#contact">Contact</a>
           </div>
         </div>
