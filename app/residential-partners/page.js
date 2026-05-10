@@ -193,12 +193,11 @@ export default function ResidentialPartnersPage() {
 }
 ```
 
-# Add Navigation Link
-
-In `app/page.js`, add this to your navigation:
+Your `app/residential-partners/page.js` must contain **only JavaScript/JSX**, ending with:
 
 ```jsx
-<a href="/residential-partners">Residential Partners</a>
+  );
+}
 ```
 
 # Add Footer Link
