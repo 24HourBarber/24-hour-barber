@@ -61,10 +61,7 @@ const partnerCards = [
 
 export default function HomePage() {
   return (
-    <main className="page-shell"><Script
-  src="https://assets.calendly.com/assets/external/widget.js"
-  strategy="lazyOnload"
-/>
+    <main className="page-shell">
       <header className="site-header">
         <div className="container header-inner">
           <a href="#top" className="brand" aria-label="24 Hour Barber home">
