@@ -8,7 +8,7 @@ export default function ResidentialPartnersPage() {
     "The Arthur Ashe Institute for Urban Health",
     "Services for the UnderServed (SUS)",
   ];
-
+  
   return (
     <main className="page-shell">
     <header className="site-header">
