@@ -55,10 +55,10 @@ a {
 .header-inner,
 .footer-inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 0;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .brand {
