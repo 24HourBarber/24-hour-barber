@@ -321,6 +321,39 @@ export default function HomePage() {
             <a href="#services">Services</a>
 <a href="/residential-partners">Residential Partners</a>
             <a href="#contact">Contact</a>
+      <div className="social-links">
+  <a
+    href="https://instagram.com/24hourbarber"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Instagram
+  </a>
+
+  <a
+    href="https://linkedin.com/company/24hourbarber"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    LinkedIn
+  </a>
+
+  <a
+    href="https://facebook.com/24hourbarber"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Facebook
+  </a>
+
+  <a
+    href="https://wa.me/19174374283"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    WhatsApp
+  </a>
+</div>
           </div>
         </div>
       </footer>
