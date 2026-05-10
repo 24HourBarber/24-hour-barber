@@ -312,26 +312,9 @@ export default function HomePage() {
 
     <button type="submit" className="button button-light button-full">
     Submit Inquiry
-  </button><button
-  type="button"
-  className="button button-outline button-full"
-  onClick={() =>
-    window.Calendly.initPopupWidget({
-      url: "https://calendly.com/24hourbarber",
-    })
-  }
->
-  Schedule Consultation
-</button>
-      <a
-  href="https://calendly.com/24hourbarber"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="button button-outline button-full"
->
-  Schedule Consultation
-</a>
-</form>
+  </button><button type="submit" className="button button-light button-full">
+  Submit Inquiry
+</button><CalendlyButton />
         </div>
       </section>
 
