@@ -241,10 +241,7 @@ export default function HomePage() {
           <div>
             <p className="section-kicker contact-kicker">Contact</p>
             <h2>Request service for yourself, a loved one, or your residential program.</h2>
-            <p className="contact-copy">
-              Ready for the next step? Replace the placeholder contact details below with your phone number,
-              email address, booking link, or intake form.
-            </p>
+  
           </div>
 
     <form action="/api/inquiry" method="POST" className="contact-card">
