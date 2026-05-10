@@ -3,7 +3,7 @@ import CalendlyButton from "./components/CalendlyButton";
 const services = [
   {
     title: 'Haircuts & Shape-Ups',
-    body: 'body: 'Professional cuts, shape-ups, facial hair grooming, and dependable routine barbering for individual clients and community members.',
+    body: 'Professional cuts, shape-ups, facial hair grooming, and dependable routine barbering for individual clients and community members.',
   },
   {
     title: 'Residential Home Visits',
