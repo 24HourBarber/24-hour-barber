@@ -191,31 +191,3 @@ export default function ResidentialPartnersPage() {
     </main>
   );
 }
-```
-
-Your `app/residential-partners/page.js` must contain **only JavaScript/JSX**, ending with:
-
-```jsx
-  );
-}
-```
-
-# Add Footer Link
-
-In your footer links:
-
-```jsx
-<a href="/residential-partners">Residential Partners</a>
-```
-
-# Recommended SEO Page Title
-
-Add later using metadata:
-
-```jsx
-export const metadata = {
-  title: "Residential Grooming Partnerships | 24 Hour Barber",
-  description:
-    "Professional on-site barber services for residential homes, supportive housing programs, and care-centered communities.",
-};
-```
