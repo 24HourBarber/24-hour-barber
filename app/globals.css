@@ -603,3 +603,23 @@ a {
 .calendly-overlay {
   z-index: 999999 !important;
 }
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.social-links a {
+  color: rgba(255,255,255,0.72);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+  color: white;
+  opacity: 1;
+}
