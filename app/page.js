@@ -1,3 +1,11 @@
+import {
+  Instagram,
+  Linkedin,
+  Facebook,
+  MessageCircle,
+} from "lucide-react";
+
+
 import CalendlyButton from "./components/CalendlyButton";
 
 const services = [
@@ -335,7 +343,8 @@ export default function HomePage() {
     target="_blank"
     rel="noopener noreferrer"
   >
-    Instagram
+    <Instagram size={18} />
+    <span>Instagram</span>
   </a>
 
   <a
@@ -343,7 +352,8 @@ export default function HomePage() {
     target="_blank"
     rel="noopener noreferrer"
   >
-    LinkedIn
+    <Linkedin size={18} />
+    <span>LinkedIn</span>
   </a>
 
   <a
@@ -351,7 +361,8 @@ export default function HomePage() {
     target="_blank"
     rel="noopener noreferrer"
   >
-    Facebook
+    <Facebook size={18} />
+    <span>Facebook</span>
   </a>
 
   <a
@@ -359,7 +370,8 @@ export default function HomePage() {
     target="_blank"
     rel="noopener noreferrer"
   >
-    WhatsApp
+    <MessageCircle size={18} />
+    <span>WhatsApp</span>
   </a>
 </div>
         </div>
