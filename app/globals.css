@@ -617,3 +617,6 @@ a {
 .button-outline:hover {
   background: rgba(255,255,255,0.06);
 }
+.calendly-overlay {
+  z-index: 999999 !important;
+}
