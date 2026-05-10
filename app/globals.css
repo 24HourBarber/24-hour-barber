@@ -602,3 +602,14 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+.button-outline {
+  border: 1px solid rgba(255,255,255,0.15);
+  background: transparent;
+  color: white;
+  margin-top: 14px;
+}
+
+.button-outline:hover {
+  background: rgba(255,255,255,0.06);
+}
