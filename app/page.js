@@ -317,11 +317,17 @@ export default function HomePage() {
       <footer className="site-footer">
         <div className="container footer-inner">
           <p>© 2026 24 Hour Barber. Mobile barbering for clients and residential care communities.</p>
-          <div className="footer-links">
-            <a href="#services">Services</a>
-<a href="/residential-partners">Residential Partners</a>
-            <a href="#contact">Contact</a>
-      <div className="social-links">
+         <div className="footer-links">
+  <a href="#services">Services</a>
+
+  <a href="/residential-partners">
+    Residential Partners
+  </a>
+
+  <a href="#contact">Contact</a>
+</div>
+
+<div className="social-links">
   <a
     href="https://instagram.com/24hourbarber"
     target="_blank"
@@ -354,7 +360,6 @@ export default function HomePage() {
     WhatsApp
   </a>
 </div>
-          </div>
         </div>
       </footer>
     </main>
