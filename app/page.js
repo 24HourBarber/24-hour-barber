@@ -73,7 +73,7 @@ export default function HomePage() {
           </a>
 
           <nav className="site-nav" aria-label="Primary navigation">
-            <a href="#services">Services</a
+            <a href="#services">Services</a>
 <a href="/residential-partners">Residential Partners</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
