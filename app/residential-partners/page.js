@@ -9,7 +9,7 @@ export default function ResidentialPartnersPage() {
     "Services for the UnderServed (SUS)",
   ];
   
-  return (
+return (
     <main className="page-shell">
     <header className="site-header">
   <div className="container header-inner">
