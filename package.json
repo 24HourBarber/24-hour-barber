@@ -12,5 +12,6 @@
     "react": "latest",
     "react-dom": "latest",
     "nodemailer": "^6.9.15"
+    "lucide-react": "^0.468.0"
   }
 }
