@@ -3,7 +3,7 @@ import CalendlyButton from "./components/CalendlyButton";
 const services = [
   {
     title: 'Haircuts & Shape-Ups',
-    body: 'Professional cuts, shape-ups, beard grooming, and dependable routine barbering for individual clients and community members.',
+    body: 'body: 'Professional cuts, shape-ups, facial hair grooming, and dependable routine barbering for individual clients and community members.',
   },
   {
     title: 'Residential Home Visits',
@@ -68,7 +68,9 @@ export default function HomePage() {
             <div className="brand-badge">24</div>
             <div>
               <div className="brand-kicker">24 Hour Barber</div>
-              <div className="brand-subtitle">Mobile barbering with dignity</div>
+              <div className="brand-subtitle">
+  On-site barber services with dignity 
+    </div>
             </div>
           </a>
 
