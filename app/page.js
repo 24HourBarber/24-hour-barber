@@ -307,6 +307,14 @@ export default function HomePage() {
     <button type="submit" className="button button-light button-full">
     Submit Inquiry
   </button>
+      <a
+  href="https://calendly.com/24hourbarber"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="button button-outline button-full"
+>
+  Schedule Consultation
+</a>
 </form>
         </div>
       </section>
