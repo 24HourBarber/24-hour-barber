@@ -1,5 +1,7 @@
 
+"use client";
 
+import Script from "next/script";
 const services = [
   {
     title: 'Haircuts & Shape-Ups',
@@ -61,7 +63,10 @@ const partnerCards = [
 
 export default function HomePage() {
   return (
-    <main className="page-shell">
+    <main className="page-shell"><Script
+  src="https://assets.calendly.com/assets/external/widget.js"
+  strategy="lazyOnload"
+/>
       <header className="site-header">
         <div className="container header-inner">
           <a href="#top" className="brand" aria-label="24 Hour Barber home">
@@ -306,7 +311,17 @@ export default function HomePage() {
 
     <button type="submit" className="button button-light button-full">
     Submit Inquiry
-  </button>
+  </button><button
+  type="button"
+  className="button button-outline button-full"
+  onClick={() =>
+    window.Calendly.initPopupWidget({
+      url: "https://calendly.com/24hourbarber",
+    })
+  }
+>
+  Schedule Consultation
+</button>
       <a
   href="https://calendly.com/24hourbarber"
   target="_blank"
