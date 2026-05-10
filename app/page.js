@@ -74,6 +74,7 @@ export default function HomePage() {
 
           <nav className="site-nav" aria-label="Primary navigation">
             <a href="#services">Services</a>
+    <a href="/residential-partners">Residential Partners</a>
             <a href="#partners">Residential Partners</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
@@ -320,6 +321,7 @@ export default function HomePage() {
           <div className="footer-links">
             <a href="#services">Services</a>
             <a href="#partners">Residential Partners</a>
+      <a href="/residential-partners">Residential Partners</a>
             <a href="#contact">Contact</a>
           </div>
         </div>
