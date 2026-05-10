@@ -316,7 +316,7 @@ export default function HomePage() {
 
       <footer className="site-footer">
         <div className="container footer-inner">
-          <p>© 2026 24 Hour Barber. Mobile barbering for clients and residential care communities.</p>
+          <p>© 2026 24 Hour Barber. On-site barber services for individuals and residential care communities.</p>
          <div className="footer-links">
   <a href="#services">Services</a>
 
