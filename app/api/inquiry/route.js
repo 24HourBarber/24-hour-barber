@@ -1,6 +1,4 @@
-import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
@@ -12,33 +10,42 @@ export async function POST(req) {
     const serviceType = formData.get("serviceType");
     const message = formData.get("message");
 
-    const { data, error } = await resend.emails.send({
-      from: "24 Hour Barber <onboarding@resend.dev>",
-      to: ["24hourbarber@gmail.com"],
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    await transporter.sendMail({
+      from: `"24 Hour Barber Website" <${process.env.EMAIL_USER}>`,
+      to: "24hourbarber@gmail.com",
+      replyTo: email,
       subject: `New Inquiry - ${serviceType}`,
-      reply_to: email,
+
       html: `
         <h2>New Inquiry Submission</h2>
+
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Service Type:</strong> ${serviceType}</p>
+
         <hr />
+
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
     });
 
-    if (error) {
-      console.error("Resend error:", error);
-      return new Response(JSON.stringify(error), { status: 500 });
-    }
+    return Response.redirect(
+      new URL("/thank-you", req.url),
+      302
+    );
 
-    console.log("Resend success:", data);
-
-    return Response.redirect(new URL("/thank-you", req.url), 302);
   } catch (error) {
-    console.error("Server error:", error);
+    console.error(error);
 
     return new Response(
       JSON.stringify({
