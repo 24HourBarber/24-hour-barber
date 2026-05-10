@@ -551,19 +551,6 @@ a {
   margin-bottom: 18px;
 }
 
-.contact-field {
-  width: 100%;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(255,255,255,0.95);
-  color: #111;
-  border-radius: 24px;
-  padding: 20px 22px;
-  font: inherit;
-  font-size: 16px;
-  outline: none;
-  transition: all 0.2s ease;
-}
-
 .contact-field::placeholder {
   color: rgba(255,255,255,0.45);
 }
@@ -608,10 +595,6 @@ a {
   background: transparent;
   color: white;
   margin-top: 14px;
-}
-
-.button-outline:hover {
-  background: rgba(255,255,255,0.06);
 }
 
 .button-outline:hover {
