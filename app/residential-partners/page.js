@@ -1,3 +1,10 @@
+import {
+  Instagram,
+  Linkedin,
+  Facebook,
+  MessageCircle,
+} from "lucide-react";
+
 export default function ResidentialPartnersPage() {
   const organizations = [
     "Administration for Children’s Services (ACS)",
@@ -143,6 +150,60 @@ return (
           </div>
         </div>
       </section>
+                <footer className="site-footer">
+  <div className="container footer-inner">
+    <p>
+      © 2026 24 Hour Barber. On-site barber services for individuals and
+      residential care communities.
+    </p>
+
+    <div className="footer-links">
+      <a href="/">Home</a>
+
+      <a href="/#services">Services</a>
+
+      <a href="/#contact">Contact</a>
+    </div>
+
+    <div className="social-links">
+      <a
+        href="https://instagram.com/24hourbarber"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Instagram size={18} />
+        <span>Instagram</span>
+      </a>
+
+      <a
+        href="https://linkedin.com/company/24hourbarber"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Linkedin size={18} />
+        <span>LinkedIn</span>
+      </a>
+
+      <a
+        href="https://facebook.com/24hourbarber"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Facebook size={18} />
+        <span>Facebook</span>
+      </a>
+
+      <a
+        href="https://wa.me/19174374283"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <MessageCircle size={18} />
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</footer>
     </main>
   );
 }
